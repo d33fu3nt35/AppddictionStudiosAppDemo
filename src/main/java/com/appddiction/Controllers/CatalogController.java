@@ -54,7 +54,7 @@ public class CatalogController {
         return "catalogform";
     }
 
-    @RequestMapping("product/delete/{id}")
+    @RequestMapping("catalog/delete/{id}")
     public String delete(@PathVariable Integer id){
         catalogService.deleteCatalog(id);
         return "redirect:/catalogs";

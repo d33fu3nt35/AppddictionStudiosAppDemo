@@ -5,3 +5,11 @@
 th {
     text-transform: uppercase;
 }
+
+.col-sm-2 {
+    text-transform: uppercase;
+}
+
+.col-sm-10 {
+    max-width: 100%;
+}
