@@ -5,7 +5,7 @@
     <title>Appdicction Studio Demo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
             integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
             crossorigin="anonymous"></script>
@@ -20,14 +20,43 @@
 </head>
 <body>
 
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">Catalog</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/catalogs">Catalogs</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
 <div class="jumbotron">
     <h1 class="display-3">Hello, Appddiction!</h1>
     <p class="lead">This is a test application that I was tasked to complete during the interview process.</p>
-    <hr class="my-4" />
-    <p>So far what I've been able to do is set up a simple spring boot website, &amp; connect it with a built-in memory database known as H2. I have the controller set up that you can view in <a href="https://github.com/d33fu3nt35/AppddictionStudiosAppDemo"> Github.</a>
-    Everything in my controller works all I need to setup are the views. The controller so far allows you to view all catalogs, select a specific catalog based on the catalogs Id, edit the catalog based on its Id, add a new catalog with all the required fields, &amp; delete a catalog based on Id.</p>
+    <hr class="my-4"/>
+    <p>So far what I've been able to do is set up a simple spring boot website, &amp; connect it with a built-in memory
+        database known as H2. I have the controller set up that you can view in <a
+                href="https://github.com/d33fu3nt35/AppddictionStudiosAppDemo"> Github.</a>
+        Everything in my controller works all I need to setup are the views. The controller so far allows you to view
+        all catalogs, select a specific catalog based on the catalogs Id, edit the catalog based on its Id, add a new
+        catalog with all the required fields, &amp; delete a catalog based on Id.</p>
     <br/>
-    <p>So far I have one view set up, but you can only view all the catalog info based off the catalog's id. Click below for an example.</p>
+    <p>So far I have one view set up, but you can only view all the catalog info based off the catalog's id. Click below
+        for an example.</p>
     <p class="lead">
         <a class="btn btn-primary btn-lg" href="/catalog/1" role="button">View Example</a>
     </p>
