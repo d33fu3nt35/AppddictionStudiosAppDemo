@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Appdicction Studio Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+    <link href="css/stylesheet.css"
+          th:href="@{css/stylesheet.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+
+<div class="container">
+    <div th:if="${not #lists.isEmpty(catalogs)}">
+        <h2>Catalog List</h2>
+        <table class="table table-striped">
+
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Catalog Id</th>
+                <th>View</th>
+                <th>Edit</th>
+            </tr>
+
+            <tr th:each="catalog : ${catalogs}">
+                <td th:text="${catalog.id}"><a href="/catalog/${catalog.id}">Id</a></td>
+                <td th:text="${catalog.title}">Title</td>
+                <td th:text="${catalog.description}">Description</td>
+                <td th:text="${catalog.price}">Price</td>
+                <td th:text="${catalog.catalogId}">Catalog Id</td>
+                <td><a th:href="${'/catalog/' + catalog.id}">View</a></td>
+                <td><a th:href="${'/catalog/edit' + catalog.id}">Edit</a></td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
